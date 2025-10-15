@@ -1,3 +1,8 @@
 .JFONT{}
 
-
+.locatebox{
+border-style: double;
+border-color: black;
+border-width: 2px;
+border-radius: 12px;
+}
