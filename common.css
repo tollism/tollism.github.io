@@ -17,4 +17,5 @@ background-color: #f1f1f1;
 height: 100%; 
 position: fixed; 
 overflow: auto; 
+clear: right;
 }
