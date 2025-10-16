@@ -396,6 +396,8 @@ var {
     font-display: swap;}
 /* End of Fonts */
 
+/* Beginning of Advanced Design Variables */
+
 .locatebox{
 border-style: double;
 border-color: black;
@@ -408,6 +410,9 @@ border-padding:8px;
 list-style-type: none;
 margin: 0;
 padding: 0;
+
+
+/* End of Advanced Design Variables */
 width: 130px;
 background-color: #f1f1f1;
 height: 100%; 
