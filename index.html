@@ -12,19 +12,27 @@
 <label for="English" ><input id="en" type="radio" name="en">English</label>
 
 <span id="clock"></span>
-<script>(function () {
 
-  var clockElement = document.getElementById( "clock" );
+<script>
+(function () {
+  var clockElement = document.getElementById("clock");
+  function updateClock(clock) {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+    const day = days[now.getDay()]; // 0-6, Sunday-Saturday
+    const year = now.getFullYear();
 
-  function updateClock ( clock ) {
-    clock.innerHTML = new Date().toLocaleTimeString();
-  }
-
+    clock.innerHTML = `${hours}:${minutes}:${seconds} ${day}`;
+    
+    console.log("Day of week (short):", day);
+    console.log("Year:", year);}
   setInterval(function () {
-      updateClock( clockElement );
-  }, 1000);
+    updateClock(clockElement);
+  }, 1000);}());</script>
 
-}());</script>
   
 </form>
 
