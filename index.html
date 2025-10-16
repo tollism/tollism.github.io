@@ -35,7 +35,7 @@
       weekday: 'short'});
     const day = dayFormatter.format(now).toUpperCase();
 
-    clock.innerHTML = `${hours}(h):${minutes}(m):${seconds}(s) ${day}`;
+    clock.innerHTML = `${hours}:${minutes}:${seconds} ${day}`;
 
     const dateFormatter = new Intl.DateTimeFormat('en-US', {
       year: 'numeric',
