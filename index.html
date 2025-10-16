@@ -11,27 +11,34 @@
 <form>Language
 <label for="English" ><input id="en" type="radio" name="en">English</label>
 
-<span id="clock"></span>
+<span id="clock"></span><br>
+<span id="date"></span>
 
 <script>
 (function () {
-  var clockElement = document.getElementById("clock");
-  function updateClock(clock) {
+  const clockElement = document.getElementById("clock");
+  const dateElement = document.getElementById("date");
+
+  function updateTimeAndDate(clock, date) {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
     const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-    const day = days[now.getDay()]; // 0-6, Sunday-Saturday
+    const day = days[now.getDay()];
+
+    clock.innerHTML = `${hours}(h):${minutes}(m):${seconds}(s) ${day}`;
+
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+    const dateNum = String(now.getDate()).padStart(2, '0');
     const year = now.getFullYear();
 
-    clock.innerHTML = `${hours}:${minutes}:${seconds} ${day}`;
-    
-    console.log("Day of week (short):", day);
-    console.log("Year:", year);}
+    date.innerHTML = `${month}-${dateNum}-${year}`;}
+
   setInterval(function () {
-    updateClock(clockElement);
+    updateTimeAndDate(clockElement, dateElement);
   }, 1000);}());</script>
+
 
   
 </form>
