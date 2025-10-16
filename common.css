@@ -381,13 +381,22 @@ var {
 
 /* Fonts */
 @font-face {
-  font-family: KodeMono; 
+  font-family: KodeMonoR; 
   src: url(/fonts/Kode-Regular.woff2); 
   font-weight: 100;
   font-display: swap;}
 
+@font-face {
+	font-family: KodeMonoB
+	src: url(/fonts/Kode-Bold.woff2);
+	font-weight: bold;
+	font-display: swap;}
+
 .KodeR{
-	font-family: KodeMono;}
+	font-family: KodeMonoR;}
+
+.KodeB{
+	font-family: KodeMonoB;}
 
 @font-face {
     font-family: 'Daeojamjil';
