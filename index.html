@@ -11,7 +11,20 @@
 <form>Language
 <label for="English" ><input id="en" type="radio" name="en">English</label>
 
+<span id="clock"></span>
+<script>(function () {
 
+  var clockElement = document.getElementById( "clock" );
+
+  function updateClock ( clock ) {
+    clock.innerHTML = new Date().toLocaleTimeString();
+  }
+
+  setInterval(function () {
+      updateClock( clockElement );
+  }, 1000);
+
+}());</script>
   
 </form>
 
