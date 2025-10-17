@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="common.css">
 
+<main><body>
+
+<div style="max-width:15%; position:fixed; float:left; height:95%; border-style:solid; border-color:black; border-width:8px; border-radius:3px; overflow:hidden;">
+  
+<div style = "padding-left:5px; padding-right:10px; border-style:double; border-width:4px; border-radius:3px; border-color: black; overflow: hidden;"><span class="KodeR" id="clock"></span><br>
+<span class="KodeR" id="date">
+
+<script src="scripts/clock.js"></span></script></div>
+<div style="display: flex; align-items: stretch;">
+<div class="KodeR" style="max-width: 60%;font-size: 1.25em;padding-left: 5px;padding-right: 10px;border-style: double;border-width: 4px;border-radius: 3px;border-color: black; display: flex;align-items: center;">Your Location: About </div>
+
+<div style="display: flex;flex-direction: column; flex: 1;border-style: double;border-width: 4px;border-radius: 3px;border-color: black; overflow:wrap;">
+<button class="KodeR" style="flex: 1; border: none; font-size: 1em;">1</button>
+<button class="KodeR" style="flex: 1; border: none; font-size: 1em;">2</button></div></div>
+
+
+<div class="topnav">
+<input class ="KodeR" style="margin-left:8px; margin-top:15px; margin-right:15px; border-color:black; width:82%; border-type:solid; border-width:4px; padding-left:5px; padding-right:10px; left:6%;"type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search..." title="Type in a category">
+</div>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";}}}
+</script>
+
+<div style = "margin-top: 15px; margin-right:15px; margin-left:15px; border-style:double; border-width:4px; border-radius:3px; border-color: black; overflow: hidden;"><center><a href="tollism.github.io"><button class="KodeR" style="width:100%; outline:none; border:none; font-size: 1.25em;">HOME</button></a></center></div>
+<div style="border-style:solid; border-color:black; border-bottom:3px; margin-top:5px;"></div>
+
+<div class="l-navlink"><center><a href="tollism.github.io/forum"><button class="KodeR" style="width:100%; outline:none; border:none; font-size: 1.25em;">Forum</button></a></center></div>
+<div class="l-navlink" style = "margin-top: 15px; margin-right:15px; margin-left:15px; border-style:double; border-width:4px; border-radius:3px; border-color: black; overflow: hidden;"><center><a href="https://tollism.github.io/articles"><button class="KodeR" style="width:100%; outline:none; border:none; font-size: 1.25em;">Articles</button></a></center></div>
+<div class="l-navlink" style = "margin-top: 15px; margin-right:15px; margin-left:15px; border-style:double; border-width:4px; border-radius:3px; border-color: black; overflow: hidden;"><center><button class="KodeR" style="width:100%; outline:none; border:none; font-size: 1.25em;">Images</button></center></div>
+<div class="l-navlink" style = "margin-top: 15px; margin-right:15px; margin-left:15px; border-style:double; border-width:4px; border-radius:3px; border-color: black; overflow: hidden;"><center><a href="tollism.github.io/about"><button class="KodeR" style="width:100%; outline:none; border:none; font-size: 1.25em;">About Me</button></a></center></div>
+<div style="border-style:solid; border-color:black; border-bottom:3px; margin-top:5px;"></div>
+<div class="KodeR" style = "font-size:1.15em;"><center><u>Recent:</u></center></div>
+
+
+</div></div></body></main></head></html>
