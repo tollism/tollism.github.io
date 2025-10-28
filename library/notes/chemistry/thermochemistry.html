@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="common.css">
+
+<main><body>
+
+<div style="max-width:15%; position:fixed; float:left; height:95%; border-style:solid; border-color:black; border-width:8px; border-radius:3px; overflow:hidden;">
+  
+<div style = "padding-left:5px; padding-right:10px; border-style:double; border-width:4px; border-radius:3px; border-color: black; overflow: hidden;"><span class="KodeR" id="clock"></span><br>
+<span class="KodeR" id="date">
+
+<script src="scripts/clock.js"></span></script></div>
+<div style="display: flex; align-items: stretch;">
+<div class="KodeR" style="max-width: 60%;font-size: 1.25em;padding-left: 5px;padding-right: 10px;border-style: double;border-width: 4px;border-radius: 3px;border-color: black; display: flex;align-items: center;">Your Location: Notes Chem: Thermochemistry</div>
+
+<div style="display: flex;flex-direction: column; flex: 1;border-style: double;border-width: 4px;border-radius: 3px;border-color: black; overflow:wrap;">
+<button class="KodeR" style="flex: 1; border: none; font-size: 1em;">1</button>
+<button class="KodeR" style="flex: 1; border: none; font-size: 1em;">2</button></div></div>
+
+
+<div class="topnav">
+<input class ="KodeR" style="margin-left:8px; margin-top:15px; margin-right:15px; border-color:black; width:82%; border-type:solid; border-width:4px; padding-left:5px; padding-right:10px; left:6%;"type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search..." title="Type in a category">
+</div>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";}}}
+</script>
+
+<div style = "margin-top: 15px; margin-right:15px; margin-left:15px; border-style:double; border-width:4px; border-radius:3px; border-color: black; overflow: hidden;"><center><a href="tollism.github.io"><button class="KodeR" style="width:100%; outline:none; border:none; font-size: 1.25em;">HOME</button></a></center></div>
+<div style="border-style:solid; border-color:black; border-bottom:3px; margin-top:5px;"></div>
+
+<div class="l-navlink"><center><a href="forum"><button class="KodeR" style="width:100%; outline:none; border:none; font-size: 1.25em;">Forum</button></a></center></div>
+<div class="l-navlink"><center><a href="articles"><button class="KodeR" style="width:100%; outline:none; border:none; font-size: 1.25em;">Articles</button></a></center></div>
+<div class="l-navlink"><center><a href="library"><button class="KodeR" style="width:100%; outline:none; border:none; font-size: 1.25em;">Projects</button></a></center></div>
+<div class="l-navlink"><center><a href="about"><button class="KodeR" style="width:100%; outline:none; border:none; font-size: 1.25em;">About Me</button></a></center></div>
+<div style="border-style:solid; border-color:black; border-bottom:3px; margin-top:5px;"></div>
+<div class="KodeR" style = "font-size:1.15em;"><center><u>Recent:</u></center></div>
+<div><ul class="KodeR">
+<li> Articles Added</li>
+<li> About Me Added</li>
+<li> Forum Added</li>
+<li> Images Added  </li>
+</ul></div>
+
+
+</div></div>
+
+  
+<!--  Right Element -->
+<div style="position:relative; left:15%; border-left:12px; border-style:solid; padding-left:35px; border-color:black;  margin-left:12px; overflow-x: hidden; max-width:80%;  ">
+  
+<div class="KodeR" style = " line-height:0.5em;"><h1>Tollism [Tolli]</h1><h3>He/Him/They/Them</h3></div>
+<hr>
+<p class = "paragraph"'''Enthalpy [H & dH]''' is the energy content of a constant system at idle pressure. When it is positive the system is '''endothermic''' - or a positive intake of energy. 
+  When negative it is '''Exothermic''', exerting heat. Exothermic makes the area around it hotter, giving off heat. Endo is the opposite - taking in heat.
+
+  '''Critical Formulas:'''
+  * q = mc(dT):  q = heat transfer, m = mass, c = specific heat capacity in joules/gram most often, dT = (Tf - Ti).
+  * calories -> joules = *4.18; 1 calorie = 4.18 Joules
+  
+
+  Use cases:
+  Finding the specific heat capacity of two objects cooled in eachother [with one known]: qb = -q[known] --> m(dT) * c_b = m(dT) * c_a: c_b = c_a * m(dT)/m(dT)
+  
+  
+  
+  '''bond Enthalpies''' = Bonds broken [reactants] - Bonds formed [products]
+
+'''dH = Sum[bonds broken] + Negative Sum[bonds formed].
+
+'''Moles from added heat''' = (Added Heat * Coefficient of Product) / dH of reaction.
+
+
+'''Moles from half reactions''' = Find target of product/missing info. Reversing the sum if necessary.
+EX: 
+  * dH of CO(g) + 2H₂(g) → CH₃OH(g)
+  
+  * 2CO(g) + O2(g) → 2CO2 (g)  ΔH₁ = −566 kJ
+  * 2H2 (g) + O2 (g) → 2H2O (g)  ΔH₂ = −571 kJ
+  * 2  CH3OH (g) + 3O2 (g) → 2CO2 (g) + 4H2O (g)  ΔH₃ = −1430 kJ
+
+  We have the enthalpy for 2CO = so multiply the whole base reaction by two.
+  We need 4H2 = so multiply 2 by 3.
+  CH3OH needs to be on the product side - so we can flip the enthalpy of step 3 to get +1430 KG
+
+  2CO + 4H2 -> 2CH3OH
+
+  Then divide by two to get 1 CH3OH
+
+  (-566 + 2[-571] + 1430 )/2 = -139Kj
+
+
+  ></p>
+<hr>
+
+
+
+<hr>
+<p><span class="KodeR" style="font-size:0.6em;"> This website is being hosted as a GitHub Page. You can freely view the source here:<a href="https://github.com/tollism/tollism.github.io/tree/main?tab=readme-ov-file">SOURCE</a></span>
+</div>
+</body></main></html>
+
+
 
